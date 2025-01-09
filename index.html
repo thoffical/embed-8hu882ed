@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThPro Captcha</title>
+  <style>
+    /* Inline CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #thpro-captcha {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    #captcha-checkbox {
+      margin-right: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #response {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    #response.success {
+      color: green;
+    }
+
+    #response.error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>ThPro Captcha</h1>
+
+  <form id="captchaForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <div id="thpro-captcha">
+      <input type="checkbox" id="captcha-checkbox" name="captcha-checkbox">
+      <label for="captcha-checkbox">I am not a robot</label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="response"></div>
+
+  <!-- Include ThPro Captcha script from Gist -->
+  <script src="https://gist.github.com/thoffical/ed2d88a2b8b38c0f122c63fb383c8d73.js"></script>
+</body>
+</html>
